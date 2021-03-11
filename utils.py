@@ -36,10 +36,10 @@ def load_template(file):
 #     with open('data/notes.json', "r", encoding='utf8') as json_file: 
 #         data = json.load(json_file) 
 
-    data.append(dict)
+    # data.append(dict)
 
-    with open('data/notes.json', 'w') as json_file:
-        json.dump(data, json_file)
+    # with open('data/notes.json', 'w') as json_file:
+    #     json.dump(data, json_file)
 
 
 

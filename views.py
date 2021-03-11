@@ -1,5 +1,7 @@
 from utils import load_data, load_template, build_response
 from database import Database, Note
+from urllib.parse import *
+
 def index(request, db):
     if request.startswith('POST'):
         request = request.replace('\r', '')
@@ -15,15 +17,12 @@ def index(request, db):
         # Dica: use o método split da string e a função unquote_plus
 
         for chave_valor in corpo.split('&'):
+            chave_valor = unquote_plus(chave_valor)
             div = chave_valor.split('=')
-            try:
-               div[1]= div[1].replace("+"," ")
-            except:
-                pass
+            
             params[div[0]]= div[1]
-            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!")
             print(chave_valor)
-            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
         note = Note()
         note.title = params["titulo"]
         note.content = params["detalhes"]
