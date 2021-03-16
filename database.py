@@ -11,7 +11,7 @@ class Database:
         
         self.conn.execute("INSERT INTO note (title, content) VALUES  ('{0}' , '{1}');".format(teste.title, teste.content))
         self.conn.commit()
-        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+        # print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
 
     def get_all(self):
         return [Note(linha[0],linha[1],linha[2]) for linha in self.conn.execute("SELECT id, title, content FROM note")]

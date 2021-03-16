@@ -4,15 +4,15 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function func1(){
-  document.getElementById("tx1").style.display = "none";
-  document.getElementById("inp1").style.display = "block";
+function func1(nome1,nome2){
+  document.getElementById(nome1).style.display = "none";
+  document.getElementById(nome2).style.display = "block";
   // document.getElementById("update").disable = false;
   console.log("entrouuuuuuuuuu1")
 }
-function func2(){
-  document.getElementById("tx2").style.display = "none";
-  document.getElementById("inp2").style.display = "block";
+function func2(nome1,nome2){
+  document.getElementById(nome1).style.display = "none";
+  document.getElementById(nome2).style.display = "block";
   // document.getElementById("update").disable = false;
   console.log("entrouuuuuuuuuu2")
 }

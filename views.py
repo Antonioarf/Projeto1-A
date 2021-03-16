@@ -37,7 +37,7 @@ def index(request, db):
 
         return build_response(code=303, reason='See Other', headers='Location: /')
 
-    elif request.startswith('GET'):
+    elif request.startswith('GET'): 
 
     # Cria uma lista de <li>'s para cada anotação
     # Se tiver curiosidade: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
