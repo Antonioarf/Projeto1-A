@@ -48,3 +48,6 @@ def index(request, db):
         return build_response(load_template('index.html').format(notes=notes)) # .format(notes=notes)
     
 # return load_template('index.html').format(notes=notes).encode()
+
+def erro():
+    return build_response(load_template('404.html'))

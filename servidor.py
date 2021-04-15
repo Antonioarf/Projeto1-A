@@ -2,7 +2,7 @@ import socket
 from pathlib import Path
 from utils import extract_route, read_file, build_response
 from database import Database, Note
-from views import index
+from views import index, erro
 
 CUR_DIR = Path(__file__).parent
 SERVER_HOST = '0.0.0.0'
@@ -31,6 +31,10 @@ while True:
         response = build_response() + read_file(filepath)
     elif route == '':
         response = index(request, db)
+
+    elif route != '':
+        response = erro()
+
     else:
         response = build_response()
 
